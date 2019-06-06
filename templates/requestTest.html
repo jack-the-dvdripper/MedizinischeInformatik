@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OpenMDQ</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% include "includes/_navbar.html" %}
+
+    <br><br>
+
+    <div class="jumbotron text-center">
+        <h1 style="font-size:260%;"><b>Open MDQ (Anamnesebogen 4.0)</b></h1>
+        <p style="font-size:170%;">Medical questionaires for digital natives!</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="text-center">Fragebogen</h3>
+
+                <br><br>
+
+                <form method="POST">
+                    Name: <br> <input class="form-control" type="text" name="name" placeholder="Name" required><br>
+                          <div class="invalid-feedback" style="width: 100%;">
+                              Your Name is required.
+                          </div>
+                    Vorname: <br> <input class="form-control" type="text" placeholder="Vorname" name="vorname"><br>
+                    Geburtstag: <br> <div class="row">
+                      <div class="col-sm-4">
+                      <select class="custom-select d-block w-100" name="tag">
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+                      </select>
+                      </div>
+                      <div class="col-sm-4">
+                      <select class="custom-select d-block w-100" name="monat">
+                          <option value="januar">Januar</option>
+                          <option value="februar">Februar</option>
+                          <option value="maerz">März</option>
+                          <option value="april">April</option>
+                          <option value="mai">Mai</option>
+                          <option value="juni">Juni</option>
+                          <option value="juli">Juli</option>
+                          <option value="august">August</option>
+                          <option value="september">September</option>
+                          <option value="oktober">Oktober</option>
+                          <option value="november">November</option>
+                          <option value="dezember">Dezember</option>
+                      </select>
+                      </div>
+                      <div class="col-sm-4">
+                      <select class="custom-select d-block w-100" name="jahr">
+                          <option value="2019">2019</option>
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>
+                          <option value="2014">2014</option>
+                          <option value="2013">2013</option>
+                          <option value="2012">2012</option>
+                          <option value="2011">2011</option>
+                          <option value="2010">2010</option>
+                          <option value="2009">2009</option>
+                          <option value="2008">2008</option>
+                          <option value="2007">2007</option>
+                          <option value="2006">2006</option>
+                          <option value="2005">2005</option>
+                          <option value="2004">2004</option>
+                          <option value="2003">2003</option>
+                          <option value="2002">2002</option>
+                          <option value="2001">2001</option>
+                          <option value="2000">2000</option>
+                          <option value="1999">1999</option>
+                          <option value="1998">1998</option>
+                          <option value="1997">1997</option>
+                          <option value="1996">1996</option>
+                          <option value="1995">1995</option>
+                          <option value="1994">1994</option>
+                          <option value="1993">1993</option>
+                          <option value="1992">1992</option>
+                          <option value="1991">1991</option>
+                          <option value="1990">1990</option>
+                          <option value="1989">1989</option>
+                    </select>
+                    </div>
+
+                    </div>
+                      <br>
+
+                    Straße: <br> <input class="form-control" type="text" placeholder="Straße" name="strasse"><br>
+                    Postleitzahl: <br> <input class="form-control" type="text" placeholder="PLZ" name="plz"><br>
+                    Ort: <br> <input class="form-control" type="text" placeholder="Ort" name="ort"><br>
+                    E-Mail: <br> <input class="form-control" type="text" placeholder="Mail" name="mail"><br>
+                    Telefon: <br> <input class="form-control" type="text" placeholder="Telefon" name="telefon"><br>
+                    Beruf: <br> <input class="form-control" type="text" placeholder="Beruf" name="beruf"><br>
+                    Arbeitgeber: <br> <input class="form-control" type="text" placeholder="Arbeitgeber" name="arbeitgeber"><br>
+                    Telefon Arbeitgeber: <br> <input class="form-control" type="text" placeholder="Telefon Arbeitgeber" name="arbeitgeber_telefon"><br>
+                    Versicherung:
+                    <div class="custom-control custom-radio">
+                        <input value="privat" id="privat" name="versicherung" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="privat">Privat</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="gesetzlich" id="gesetzlich" name="versicherung" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="gesetzlich">Gesetzlich</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="freiwillig" id="freiwillig" name="versicherung" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="freiwillig">Freiwillig</label>
+                    </div>
+                    Für privat Versicherte:
+                    <div class="custom-control custom-radio">
+                        <input value="beihilfeberechtigt" id="beihilfeberechtigt" name="privat" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="beihilfeberechtigt">Beihilfeberechtigt</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="Basistarif" id="basistarif" name="privat" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="basistarif">Basistarif</label>
+                    </div>
+                    Für gesetzlich Versicherte:
+                    <br>
+                    Zusatzversicherung: <br> <input class="form-control" type="text" placeholder="Name der Zusatzversicherung" name="zusatzversicherung"><br>
+                    Betreuer: <br> <input class="form-control" type="text" placeholder="Name des Betreuers" name="betreuer"><br>
+                    Hausartzt: <br> <input class="form-control" type="text" placeholder="Name des Hausarztes" name="hausarzt"><br>
+                    Ort: <br> <input class="form-control" type="text" placeholder="Ort" name="gesetzlVersOrt"><br>
+                    Telefon: <br> <input class="form-control" type="text" placeholder="Telefon" name="gesetzlVersTelefon"><br>
+                    Behandlung: <br> <input class="form-control" type="text" placeholder="Behandlung" name="behandlung"><br>
+                    Grund: <br> <input class="form-control" type="text" placeholder="Grund" name="grund"><br>
+
+
+                    Schwangerschaft?
+                    <div class="custom-control custom-radio">
+                        <input value="ja" id="sja" name="schwangerschaft" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="sja">Ja</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="nein" id="snein" name="schwangerschaft" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="snein">Nein</label>
+                    </div>
+
+
+                    Erstaufnahme?
+                    <div class="custom-control custom-radio">
+                        <input value="ja" id="erstaufnahmeja" name="erstaufnahme" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="erstaufnahmeja">Ja</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="nein" id="erstaufnahmenein" name="erstaufnahme" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="erstaufnahmenein">Nein</label>
+                    </div>
+
+                    Chronische Krankheiten?
+                    <select class="form-control" name="chronische" size="4" multiple>
+                        <option value="asthma">Asthma</option>
+                        <option value="schlaganfall">Schlaganfall</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="krebs">Krebs</option>
+                    </select>
+
+                    <br>
+                    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"><br>
+                </form>
+
+                <br><br>
+
+
+            </div>
+
+            <div class="col-sm-4">
+                <h3 class="text-center">Infos</h3>
+
+                <br><br>
+                  {% include "includes/_infotext.html" %}
+                <p></p>
+            </div>
+
+            <div class="col-sm-4">
+                <h3 class="text-center">About</h3>
+
+                <br><br>
+                <a href="/temperature"><img width="100%" src="{{url_for('static', filename='khFlur.jpg')}}"/></a>
+                <br>
+                <p>Je um ab mitkommen hellroten im argerlich. Wangen fragen lachen pa grauen fertig knarre te ja ku. Weiterhin mu unendlich sa nichtstun schonsten. Dann ihre auch auch dich zeit ten was. Orten pfiff sehen ahren lernt weg zum des. Sa spiegel la beinahe eigenes im la. Abend ein kaute steil sto klein jeden als. Der hubsche see gro wandern richtig schalte steigst das welchem. Drang des eia loben nur las kiste.</p>
+                <a href="/temperature"><img width="100%" src="{{url_for('static', filename='abhGeraet.jpg')}}"/></a>
+                <br>
+                <p>Je um ab mitkommen hellroten im argerlich. Wangen fragen lachen pa grauen fertig knarre te ja ku. Weiterhin mu unendlich sa nichtstun schonsten. Dann ihre auch auch dich zeit ten was. Orten pfiff sehen ahren lernt weg zum des. Sa spiegel la beinahe eigenes im la. Abend ein kaute steil sto klein jeden als. Der hubsche see gro wandern richtig schalte steigst das welchem. Drang des eia loben nur las kiste.</p>
+
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2019 Open MDQ</p>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

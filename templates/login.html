@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OpenMDQ</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    {% include "includes/_navbar.html" %}
+
+    <br><br>
+
+    <div class="jumbotron text-center">
+        <h1 style="font-size:260%;"><b>Open MDQ (Anamnesebogen 4.0)</b></h1>
+        <p style="font-size:170%;">Medical questionaires for digital natives!</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="text-center">Login</h3>
+
+                <br><br>
+
+                <form action="http://127.0.0.1:5000/form-example" method="POST">
+                    Benutzername: <input class="form-control" type="text" name="username" required><br>
+                    Passwort: <input class="form-control" type="password" name="password" required><br>
+                    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Login"><br>
+                </form>
+
+                <br><br>
+
+
+
+            </div>
+
+            <div class="col-sm-4">
+                <h3 class="text-center">Informationen</h3>
+
+                <br><br>
+
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+</body>
+</html>
