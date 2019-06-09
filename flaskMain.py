@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template #import main Flask class and request object
-import DXML
+import xml_file
 
 app = Flask(__name__) #create the Flask app
 
@@ -37,14 +37,14 @@ def index():
         del normalDict['jahr']
 
         #if isinstance(formDict, dict):
-        DXML.create(formDict.get("name"), "100")
-        DXML.add(normalDict, formDict.get("name")+"_100")
+        xml_file.create(formDict.get("name"), "100")
+        xml_file.add(normalDict, formDict.get("name"), "100")
         #print(hallo)
     #    framework = request.form['framework']
 
     #    return '''<h1>The language value is: {}</h1>
     #              <h1>The framework value is: {}</h1>'''.format(language, framework)
-    print(DXML.get("Luis_100"))
+    print(xml_file.get("Kress", "100"))
     return render_template('requestTest.html')
     #return '''<form method="POST">
     #              Language: <input type="text" name="language"><br>
