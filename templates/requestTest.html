@@ -27,12 +27,28 @@
 
                 <br><br>
 
-                <form method="POST">
-                    Name: <br> <input class="form-control" type="text" name="name" placeholder="Name" required><br>
+                <form class="needs-validation" method="POST" novalidate>
+
+
+                        KrankenkassenID:<input class="form-control" type="text" placeholder="KrankenkassenID" id="krankenkassenID" name="krankenkassenID" required>
+                        <div class="invalid-feedback">
+                          Vollständige Krankenkassen ID eingeben.
+                        </div>
+                        <br>
+
+
+                    Name: <br> <input class="form-control" type="text" name="name" placeholder="Name" required>
                           <div class="invalid-feedback" style="width: 100%;">
-                              Your Name is required.
+                              Vollständigen Namen eingeben.
                           </div>
-                    Vorname: <br> <input class="form-control" type="text" placeholder="Vorname" name="vorname"><br>
+                          <br>
+
+                    Vorname: <br> <input class="form-control" type="text" placeholder="Vorname" name="vorname" required>
+                              <div class="invalid-feedback" style="width: 100%;">
+                                Vorname eingeben.
+                              </div>
+                              <br>
+
                     Geburtstag: <br> <div class="row">
                       <div class="col-sm-4">
                       <select class="custom-select d-block w-100" name="tag">
@@ -124,14 +140,14 @@
                     </div>
                       <br>
 
-                    Straße: <br> <input class="form-control" type="text" placeholder="Straße" name="strasse"><br>
-                    Postleitzahl: <br> <input class="form-control" type="text" placeholder="PLZ" name="plz"><br>
-                    Ort: <br> <input class="form-control" type="text" placeholder="Ort" name="ort"><br>
+                    Straße Hausnummer: <br> <input class="form-control" type="text" placeholder="Straße" name="strasse" required><br>
+                    Postleitzahl: <br> <input class="form-control" type="text" placeholder="PLZ" name="plz" required><br>
+                    Ort: <br> <input class="form-control" type="text" placeholder="Ort" name="ort" required><br>
                     E-Mail: <br> <input class="form-control" type="text" placeholder="Mail" name="mail"><br>
-                    Telefon: <br> <input class="form-control" type="text" placeholder="Telefon" name="telefon"><br>
-                    Beruf: <br> <input class="form-control" type="text" placeholder="Beruf" name="beruf"><br>
-                    Arbeitgeber: <br> <input class="form-control" type="text" placeholder="Arbeitgeber" name="arbeitgeber"><br>
-                    Telefon Arbeitgeber: <br> <input class="form-control" type="text" placeholder="Telefon Arbeitgeber" name="arbeitgeber_telefon"><br>
+                    Telefon: <br> <input class="form-control" type="text" placeholder="Telefon" name="telefon" required><br>
+                    Beruf: <br> <input class="form-control" type="text" placeholder="Beruf" name="beruf" required><br>
+                    Arbeitgeber: <br> <input class="form-control" type="text" placeholder="Arbeitgeber" name="arbeitgeber" required><br>
+                    Telefon Arbeitgeber: <br> <input class="form-control" type="text" placeholder="Telefon Arbeitgeber" name="arbeitgeber_telefon" required><br>
                     Versicherung:
                     <div class="custom-control custom-radio">
                         <input value="privat" id="privat" name="versicherung" type="radio" class="custom-control-input" required>
@@ -147,11 +163,11 @@
                     </div>
                     Für privat Versicherte:
                     <div class="custom-control custom-radio">
-                        <input value="beihilfeberechtigt" id="beihilfeberechtigt" name="privat" type="radio" class="custom-control-input" required>
+                        <input value="beihilfeberechtigt" id="beihilfeberechtigt" name="privat" type="radio" class="custom-control-input">
                         <label class="custom-control-label" for="beihilfeberechtigt">Beihilfeberechtigt</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input value="Basistarif" id="basistarif" name="privat" type="radio" class="custom-control-input" required>
+                        <input value="Basistarif" id="basistarif" name="privat" type="radio" class="custom-control-input">
                         <label class="custom-control-label" for="basistarif">Basistarif</label>
                     </div>
                     Für gesetzlich Versicherte:
@@ -187,16 +203,47 @@
                     </div>
 
                     Chronische Krankheiten?
-                    <select class="form-control" name="chronische" size="4" multiple>
-                        <option value="asthma">Asthma</option>
-                        <option value="schlaganfall">Schlaganfall</option>
-                        <option value="diabetes">Diabetes</option>
-                        <option value="krebs">Krebs</option>
-                    </select>
+                    <div class="custom-control form-check">
+                        <input type="checkbox" class="form-check-input" name="asthma" id="asthma">
+                        <label class="form-check-label" for="asthma">Asthma</label>
+                        </div>
+                    <div class="custom-control form-check">
+                        <input type="checkbox" class="form-check-input" name="schlaganfall" id="schlaganfall">
+                        <label class="form-check-label" for="schlaganfall">Schlaganfall</label>
+                        </div>
+                    <div class="custom-control form-check">
+                        <input type="checkbox" class="form-check-input" name="diabetes" id="diabetes">
+                        <label class="form-check-label" for="diabetes">Diabetes</label>
+                        </div>
+                    <div class="custom-control form-check">
+                        <input type="checkbox" class="form-check-input" name="krebs" id="krebs">
+                        <label class="form-check-label" for="krebs">Krebs</label>
+                      </div>
 
                     <br>
-                    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"><br>
+                    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Abschicken"><br>
                 </form>
+
+                <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
 
                 <br><br>
 

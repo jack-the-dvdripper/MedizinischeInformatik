@@ -1,0 +1,21 @@
+<_100>
+  <krankenkassenID value=""/>
+  <name value=""/>
+  <vorname value=""/>
+  <strasse value=""/>
+  <plz value=""/>
+  <ort value=""/>
+  <mail value=""/>
+  <telefon value=""/>
+  <beruf value=""/>
+  <arbeitgeber value=""/>
+  <arbeitgeber_telefon value=""/>
+  <zusatzversicherung value=""/>
+  <betreuer value=""/>
+  <hausarzt value=""/>
+  <gesetzlVersOrt value=""/>
+  <gesetzlVersTelefon value=""/>
+  <behandlung value=""/>
+  <grund value=""/>
+  <geburtstag value="01januar2019"/>
+</_100>

@@ -44,7 +44,7 @@ def index():
 
     #    return '''<h1>The language value is: {}</h1>
     #              <h1>The framework value is: {}</h1>'''.format(language, framework)
-    print(xml_file.get("Kress", "100"))
+    #print(xml_file.get("Kress", "100"))
     return render_template('requestTest.html')
     #return '''<form method="POST">
     #              Language: <input type="text" name="language"><br>

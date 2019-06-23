@@ -1,0 +1,25 @@
+<Lakiack_100>
+  <krankenkassenID value="1019229284"/>
+  <name value="Lakiack"/>
+  <vorname value="Garry"/>
+  <strasse value="Elchweg 4"/>
+  <plz value="55411"/>
+  <ort value="Bingen im Rhein"/>
+  <mail value="kukuk@ja.de"/>
+  <telefon value="558291119"/>
+  <beruf value="Professor"/>
+  <arbeitgeber value="Chef"/>
+  <arbeitgeber_telefon value="01032392"/>
+  <versicherung value="privat"/>
+  <privat value="Basistarif"/>
+  <zusatzversicherung value=""/>
+  <betreuer value="Aristoteles"/>
+  <hausarzt value="Pythagoras"/>
+  <gesetzlVersOrt value="Athen"/>
+  <gesetzlVersTelefon value="55001128"/>
+  <behandlung value="Aderlass"/>
+  <grund value="Fuss Verstaucht"/>
+  <schwangerschaft value="ja"/>
+  <erstaufnahme value="nein"/>
+  <geburtstag value="08oktober1989"/>
+</Lakiack_100>
