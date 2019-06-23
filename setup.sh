@@ -5,6 +5,7 @@
 ##############################
 
 # os name for user
+
 os="$(. /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2)"
 
 ######################
@@ -40,6 +41,7 @@ dialog  --msgbox "OpenMDQ install shell script. \n \
 ##################################
 
 installmdq(){
+
 workdir="${HOME}/bin"
 
 pip3 install -q -U --user flask
