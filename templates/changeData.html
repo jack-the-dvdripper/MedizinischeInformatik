@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OpenMDQ</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% include "includes/_navbar.html" %}
+
+    <br><br>
+
+    <div class="jumbotron text-center">
+        <h1 style="font-size:260%;"><b>Open MDQ (Anamnesebogen 4.0)</b></h1>
+        <p style="font-size:170%;">Medical questionaires for digital natives!</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <h3 class="text-center">Fragebogen</h3>
+
+                <br><br>
+
+                <form class="needs-validation" method="POST" novalidate>
+
+
+                        KrankenkassenID:<input class="form-control" type="text" placeholder="KrankenkassenID" id="krankenkassenID" name="krankenkassenID" value="{{formDict['krankenkassenID']}}" required>
+                        <div class="invalid-feedback">
+                          Vollständige Krankenkassen ID eingeben.
+                        </div>
+                        <br>
+
+
+                    Name: <br> <input class="form-control" type="text" name="name" placeholder="Name" value="{{formDict['name']}}" required>
+                          <div class="invalid-feedback" style="width: 100%;">
+                              Vollständigen Namen eingeben.
+                          </div>
+                          <br>
+
+                    Vorname: <br> <input class="form-control" type="text" placeholder="Vorname" name="vorname" value="{{formDict['vorname']}}" required>
+                              <div class="invalid-feedback" style="width: 100%;">
+                                Vorname eingeben.
+                              </div>
+                              <br>
+
+                    Geburtstag: <br> <div class="row">
+                      <div class="col-sm-4">
+                      <select class="custom-select d-block w-100" value="{{formDict['geburtstag']}}" name="tag">
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+                      </select>
+                      </div>
+                      <div class="col-sm-4">
+                      <select class="custom-select d-block w-100" name="monat" value="{{formDict['geburtstag']}}">
+                          <option value="januar">Januar</option>
+                          <option value="februar">Februar</option>
+                          <option value="maerz">März</option>
+                          <option value="april">April</option>
+                          <option value="mai">Mai</option>
+                          <option value="juni">Juni</option>
+                          <option value="juli">Juli</option>
+                          <option value="august">August</option>
+                          <option value="september">September</option>
+                          <option value="oktober">Oktober</option>
+                          <option value="november">November</option>
+                          <option value="dezember">Dezember</option>
+                      </select>
+                      </div>
+                      <div class="col-sm-4">
+                      <select class="custom-select d-block w-100" name="jahr" value="{{formDict['geburtstag']}}">
+                          <option value="2019">2019</option>
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>
+                          <option value="2014">2014</option>
+                          <option value="2013">2013</option>
+                          <option value="2012">2012</option>
+                          <option value="2011">2011</option>
+                          <option value="2010">2010</option>
+                          <option value="2009">2009</option>
+                          <option value="2008">2008</option>
+                          <option value="2007">2007</option>
+                          <option value="2006">2006</option>
+                          <option value="2005">2005</option>
+                          <option value="2004">2004</option>
+                          <option value="2003">2003</option>
+                          <option value="2002">2002</option>
+                          <option value="2001">2001</option>
+                          <option value="2000">2000</option>
+                          <option value="1999">1999</option>
+                          <option value="1998">1998</option>
+                          <option value="1997">1997</option>
+                          <option value="1996">1996</option>
+                          <option value="1995">1995</option>
+                          <option value="1994">1994</option>
+                          <option value="1993">1993</option>
+                          <option value="1992">1992</option>
+                          <option value="1991">1991</option>
+                          <option value="1990">1990</option>
+                          <option value="1989">1989</option>
+                    </select>
+                    </div>
+
+                    </div>
+                      <br>
+
+                    Straße Hausnummer: <br> <input class="form-control" type="text" placeholder="Straße" name="strasse" value="{{formDict['strasse']}}" required><br>
+                    Postleitzahl: <br> <input class="form-control" type="text" placeholder="PLZ" name="plz" value="{{formDict['plz']}}" required><br>
+                    Ort: <br> <input class="form-control" type="text" placeholder="Ort" name="ort" value="{{formDict['ort']}}" required><br>
+                    E-Mail: <br> <input class="form-control" type="text" placeholder="Mail" name="mail" value="{{formDict['mail']}}"><br>
+                    Telefon: <br> <input class="form-control" type="text" placeholder="Telefon" name="telefon" value="{{formDict['telefon']}}" required><br>
+                    Beruf: <br> <input class="form-control" type="text" placeholder="Beruf" name="beruf" value="{{formDict['beruf']}}" required><br>
+                    Arbeitgeber: <br> <input class="form-control" type="text" placeholder="Arbeitgeber" name="arbeitgeber" value="{{formDict['arbeitgeber']}}" required><br>
+                    Telefon Arbeitgeber: <br> <input class="form-control" type="text" placeholder="Telefon Arbeitgeber" name="arbeitgeber_telefon" value="{{formDict['arbeitgeber_telefon']}}" required><br>
+                    Versicherung (derzeit value="{{formDict['versicherung']}}"):
+                    <div class="custom-control custom-radio">
+                        <input value="privat" id="privat" name="versicherung" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="privat">Privat</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="gesetzlich" id="gesetzlich" name="versicherung" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="gesetzlich">Gesetzlich</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="freiwillig" id="freiwillig" name="versicherung" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="freiwillig">Freiwillig</label>
+                    </div>
+                    Für privat Versicherte (derzeit value="{{formDict['privat']}}"):
+                    <div class="custom-control custom-radio">
+                        <input value="beihilfeberechtigt" id="beihilfeberechtigt" name="privat" type="radio" class="custom-control-input">
+                        <label class="custom-control-label" for="beihilfeberechtigt">Beihilfeberechtigt</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="Basistarif" id="basistarif" name="privat" type="radio" class="custom-control-input">
+                        <label class="custom-control-label" for="basistarif">Basistarif</label>
+                    </div>
+                    Für gesetzlich Versicherte:
+                    <br>
+                    Zusatzversicherung: <br> <input class="form-control" type="text" placeholder="Name der Zusatzversicherung" name="zusatzversicherung" value="{{formDict['zusatzversicherung']}}"><br>
+                    Betreuer: <br> <input class="form-control" type="text" placeholder="Name des Betreuers" name="betreuer" value="{{formDict['betreuer']}}"><br>
+                    Hausartzt: <br> <input class="form-control" type="text" placeholder="Name des Hausarztes" name="hausarzt" value="{{formDict['hausarzt']}}"><br>
+                    Ort: <br> <input class="form-control" type="text" placeholder="Ort" name="gesetzlVersOrt" value="{{formDict['gesetzlVersOrt']}}"><br>
+                    Telefon: <br> <input class="form-control" type="text" placeholder="Telefon" name="gesetzlVersTelefon" value="{{formDict['gesetzlVersTelefon']}}"><br>
+                    Behandlung: <br> <input class="form-control" type="text" placeholder="Behandlung" name="behandlung" value="{{formDict['behandlung']}}"><br>
+                    Grund: <br> <input class="form-control" type="text" placeholder="Grund" name="grund" value="{{formDict['grund']}}"><br>
+
+
+                    Schwangerschaft (derzeit value="{{formDict['schwangerschaft']}}")?
+                    <div class="custom-control custom-radio">
+                        <input value="ja" id="sja" name="schwangerschaft" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="sja">Ja</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="nein" id="snein" name="schwangerschaft" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="snein">Nein</label>
+                    </div>
+
+
+                    Erstaufnahme (derzeit value="{{formDict['erstaufnahme']}}")?
+                    <div class="custom-control custom-radio">
+                        <input value="ja" id="erstaufnahmeja" name="erstaufnahme" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="erstaufnahmeja">Ja</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input value="nein" id="erstaufnahmenein" name="erstaufnahme" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="erstaufnahmenein">Nein</label>
+                    </div>
+
+                    Chronische Krankheiten?
+                    <div class="custom-control form-check">
+                        <input type="checkbox" class="form-check-input" name="asthma" id="asthma" value="{{formDict['asthma']}}">
+                        <label class="form-check-label" for="asthma">Asthma</label>
+                        </div>
+                    <div class="custom-control form-check" value="{{formDict['schlaganfall']}}">
+                        <input type="checkbox" class="form-check-input" name="schlaganfall" id="schlaganfall">
+                        <label class="form-check-label" for="schlaganfall">Schlaganfall</label>
+                        </div>
+                    <div class="custom-control form-check" value="{{formDict['diabetes']}}">
+                        <input type="checkbox" class="form-check-input" name="diabetes" id="diabetes">
+                        <label class="form-check-label" for="diabetes">Diabetes</label>
+                        </div>
+                    <div class="custom-control form-check" value="{{formDict['krebs']}}">
+                        <input type="checkbox" class="form-check-input" name="krebs" id="krebs">
+                        <label class="form-check-label" for="krebs">Krebs</label>
+                      </div>
+
+                    <br>
+                    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Abschicken"><br>
+                </form>
+
+                <script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+                <br><br>
+
+
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2019 Open MDQ</p>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

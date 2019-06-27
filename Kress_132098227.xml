@@ -1,0 +1,28 @@
+<Kress_132098227>
+  <krankenkassenID value="132098227"/>
+  <name value="Kress"/>
+  <vorname value="Luis"/>
+  <tag value="10"/>
+  <monat value="august"/>
+  <jahr value="1994"/>
+  <strasse value="Hintere Grube 5"/>
+  <plz value="922891"/>
+  <ort value="Bingen"/>
+  <mail value="luis.kress@web.de"/>
+  <telefon value="98324218"/>
+  <beruf value="Student"/>
+  <arbeitgeber value="TH"/>
+  <arbeitgeber_telefon value="2894272912"/>
+  <versicherung value="gesetzlich"/>
+  <zusatzversicherung value=""/>
+  <betreuer value="Klaus"/>
+  <hausarzt value="Torben"/>
+  <gesetzlVersOrt value="Bingen"/>
+  <gesetzlVersTelefon value="20011188338"/>
+  <behandlung value="Tablette"/>
+  <grund value="Schmerz"/>
+  <schwangerschaft value="nein"/>
+  <erstaufnahme value="nein"/>
+  <diabetes value="on"/>
+  <krebs value="on"/>
+<name value="Kress"/><id value="132098227"/></Kress_132098227>

@@ -3,42 +3,36 @@ import xml_file
 
 app = Flask(__name__) #create the Flask app
 
-@app.route('/query-example')
-def query_example():
-    #language = request.args.get('language') #if key doesn't exist, returns None
-    #framework = request.args['framework'] #if key doesn't exist, returns a 400, bad request error
-    #website = request.args.get('website')
-
-    return render_template('query_example.html', "python", "flask", "test")
-    #return '''<h1>The language value is: {}</h1>
-    #          <h1>The framework value is: {}</h1>
-    #          <h1>The website value is: {}'''.format(language, framework, website)
+#chars = {'ö':'oe','ä':'ae','ü':'ue'}
 
 @app.route('/', methods=['GET', 'POST']) #allow both GET and POST requests
 def index():
     if request.method == 'POST':  #this block is only entered when the form is submitted
         formDict = request.form#.get('language')
-        print(formDict.get('vorname'))
-        tag = formDict.get('tag')
-        monat = formDict.get('monat')
-        jahr = formDict.get('jahr')
-        geburtstag = tag + monat + jahr
-        if isinstance(tag, str):
-            print("hallo")
+        name = formDict.get("name")
+        #print(formDict.get('vorname'))
+        #tag = formDict.get('tag')
+        #monat = formDict.get('monat')
+        #jahr = formDict.get('jahr')
+        #geburtstag = tag + monat + jahr
+
+        #if isinstance(tag, str):
+        #    print("hallo")
 
 
 
-        normalDict = formDict.to_dict(flat=True)
-        normalDict['geburtstag'] = geburtstag
+        #normalDict = formDict.to_dict(flat=True)
+        #normalDict['geburtstag'] = geburtstag
         #formDict['geburtstag'] = geburtstag
         #formDict.update(*'geburtstag', **geburtstag)
-        del normalDict['tag']
-        del normalDict['monat']
-        del normalDict['jahr']
+
+        #del normalDict['tag']
+        #del normalDict['monat']
+        #del normalDict['jahr']
 
         #if isinstance(formDict, dict):
-        xml_file.create(formDict.get("name"), "100")
-        xml_file.add(normalDict, formDict.get("name"), "100")
+        xml_file.create(name, formDict.get("krankenkassenID"))
+        xml_file.add(formDict, name, formDict.get("krankenkassenID"))
         #print(hallo)
     #    framework = request.form['framework']
 
@@ -56,9 +50,26 @@ def index():
 @app.route('/login', methods=['GET', 'POST']) #allow both GET and POST requests
 def login():
     if request.method == 'POST':
-        formDict = request.form
-        render_template('requestTest.html')
+        name = request.form['name']
+        id = request.form['id']
+        print("55")
+        print(name)
+        print(id)
+        return changeData(name, id)
     return render_template('login.html')
+
+
+@app.route('/changeData', methods=['GET', 'POST']) #allow both GET and POST requests
+def changeData(name, id):
+    if request.method == 'POST':  #this block is only entered when the form is submitted
+        formDict = request.form
+        print("66")
+        print(formDict.get("name"))
+        print(formDict.get("id"))
+        print(formDict)
+        xml_file.add(formDict, formDict.get("name"), formDict.get("id"))
+    formDict = xml_file.get(name, id)
+    return render_template('changeData.html', formDict=formDict)
 
 
 
